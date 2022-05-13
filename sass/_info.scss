@@ -1,0 +1,21 @@
+@import "_mixin";
+
+.info{
+    padding-bottom: 160px;
+    &__title{
+        @include font($dark, 600, 20, 24px);
+        margin-top: 10px;
+        margin-bottom: 2px;
+        text-align: center;
+    }
+    img{
+        margin: 0 auto;
+    }
+    &__ph{
+        margin: 0;
+    }
+    &__subtitle{
+        text-align: center;
+        @include font($black, 400, 18px, 27px);
+    }
+}

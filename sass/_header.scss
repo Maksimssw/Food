@@ -1,0 +1,54 @@
+@import '_mixin';
+
+.btn_get{
+    width: 187px;
+    height: 55px;
+    margin-left: 60px;
+}
+
+.header{
+    background: url('../img/bg.png')  center;
+    background-repeat:repeat-x;
+    max-height: 937px;
+    &__logo{
+        width: 62px;
+        height: 24px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__link{
+        @include font(#1A2805, 400, 18px, 21px);
+        transition: 0.3s all;
+        position: relative;
+        display: block;
+        &:focus, &:hover, &:active{
+            transform: translateY(5px);
+            color: #1A2805;
+            &::before{
+                opacity: 1;
+            }
+        }
+        &::before{
+            content: '';
+            font-weight: 600;
+            transition: 0.3s all;
+            width: 14px;
+            height: 14px;
+            left: 0;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            opacity: 0;
+            background: url('../img/blocks.svg') no-repeat center;
+        }
+    }
+    &__item{
+        margin-right: 50px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}

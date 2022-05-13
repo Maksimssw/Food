@@ -1,0 +1,77 @@
+@import '_mixin';
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    display: block;
+}
+
+*{
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2{
+    font-family: 'Asap', sans-serif;
+}
+
+.btn_grn{
+    border-radius: 6px;
+    transition: 0.3s all;
+    @include font($white, 500, 18px, 21px);
+    background: $green;
+    &:hover, &:focus, &:active{
+        outline: none;
+        border: 0;
+        transform: translateY(5px);
+        color: $white;
+        background-color: #23ad31;
+    }
+}
+
+.footer__text{
+    margin-bottom: 9px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    a{
+        @include textFooter(400);
+        text-decoration: none;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 1px;
+            top: 100%;
+            transition: 0.3s all;
+            left: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+        }
+        &:hover, &:focus, &:active{
+            &::before{
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+}
+
+.footer__heading{
+    @include textFooter(600);
+    margin-bottom: 18px;
+}
+
+@import '_header';
+@import '_taste';
+@import '_info';
+@import '_food';
+@import '_choice';
+@import '_marketing';
+@import '_footer';
+
+@import '_media';

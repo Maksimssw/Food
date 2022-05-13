@@ -1,0 +1,28 @@
+@import '_mixin';
+
+.food{
+    padding-bottom: 200px;
+    &__img{
+        width: 100%;
+        height: auto;
+    }
+    &__specifications{
+        display: flex;
+        align-items: center;
+    }
+    &__title{
+        @include font($dark, 700, 51px, 58px);
+        margin-bottom: 26px;
+    }
+    &__subtitle{
+        @include text;
+        margin-bottom: 36px;
+    }
+    &__price{
+        @include font($dark, 500, 20px, 24px);
+        margin: 0;
+        padding-right: 10px;
+        margin-right: 10px;
+        border-right: 1px solid #19160C;
+    }
+}

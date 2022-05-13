@@ -1,0 +1,21 @@
+$white: #fff;
+$dark:  #191700;
+$green: #1DC22E;
+$black: #08150A;
+
+@mixin font($color, $fontWeight, $fontSize, $lineHeight) {
+    color: $color;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+}
+
+@mixin text {
+    @include  font ($black, 400, 18px, 21px);
+}
+
+@mixin textFooter($fontWeight) {
+    font-weight: $fontWeight;
+    color: $black;
+    line-height: 27px;
+}

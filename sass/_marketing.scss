@@ -1,0 +1,29 @@
+@import '_mixin';
+
+.marketing{
+    padding-bottom: 70px;
+    &__text{
+        @include font($dark, 400, 18px, 27px);
+        margin-bottom: 43px;
+    }
+    &__ph{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__user{
+        display: flex;
+        align-items: center;
+    }
+    &__name{
+        @include font($dark, 500, 18px, 27px);
+        margin: 0;
+    }
+    &__subname{
+        @include font($dark, 400, 14px, 21px);
+    }
+    &__people{
+        margin-right: 25px;
+    }
+}

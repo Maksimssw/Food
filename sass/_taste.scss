@@ -1,0 +1,33 @@
+@import '_mixin';
+
+.taste{
+    &_ph{
+        position: absolute;
+        top: 33px;
+        width: 609px;
+        height: 481px;
+        right: 0;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__wrapper{
+        padding: 240px 0 318px;
+        position: relative;
+    }
+    &__title{
+        @include font($dark, 700, 67px, 76px);
+        margin-bottom: 15px;
+    }
+    &__subtitle{
+        @include font($black, 400, 18px, 27px);
+        margin-bottom: 40px;
+    }
+}
+
+
+.btn_taste{
+    width: 193px;
+    height: 60px;
+}
